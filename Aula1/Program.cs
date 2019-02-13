@@ -37,7 +37,7 @@ namespace Aula1
 
                 await next.Invoke();
                 // Ordem 4
-                ordem += "4";
+                ordem += "6";
                 await context.Response.WriteAsync($"Ordem: {ordem}");
             });
 
@@ -49,7 +49,19 @@ namespace Aula1
                 await next.Invoke();
                 
                 //Ordem 3
+                ordem += "5";
+
+            });
+
+            app.Use(async (context, next) => {
+                
+                //Ordem 2
                 ordem += "3";
+                
+                await next.Invoke();
+                
+                //Ordem 3
+                ordem += "4";
 
             });
         }
