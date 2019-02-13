@@ -27,9 +27,30 @@ namespace Aula1
             _configuration = configuration;            
         }
         public void Configure(IApplicationBuilder app)
-        {
+        {  
+            var ordem = string.Empty;
+
             app.Use(async (context, next) => {
-                await context.Response.WriteAsync(_configuration["Application"]);
+                
+                //Ordem 1 
+                ordem += "1";
+
+                await next.Invoke();
+                // Ordem 4
+                ordem += "4";
+                await context.Response.WriteAsync($"Ordem: {ordem}");
+            });
+
+            app.Use(async (context, next) => {
+                
+                //Ordem 2
+                ordem += "2";
+                
+                await next.Invoke();
+                
+                //Ordem 3
+                ordem += "3";
+
             });
         }
     }
