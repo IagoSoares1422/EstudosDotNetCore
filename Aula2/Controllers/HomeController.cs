@@ -25,5 +25,11 @@ namespace Aula2.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+        public IActionResult Pessoa()
+        {
+            var pessoa = new Pessoa{Nome = "Iago", Idade = 19};
+            return View(pessoa);
+        }
     }
 }
