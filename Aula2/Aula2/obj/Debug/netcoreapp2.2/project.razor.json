@@ -1,0 +1,14 @@
+{
+  "ProjectFilePath": "c:\\Users\\Ziad-PC20\\EstudosDotNetCore\\Aula2\\Aula2\\Aula2.csproj",
+  "TargetFramework": "netcoreapp2.2",
+  "TagHelpers": [],
+  "Configuration": {
+    "ConfigurationName": "MVC-2.1",
+    "LanguageVersion": "2.1",
+    "Extensions": [
+      {
+        "ExtensionName": "MVC-2.1"
+      }
+    ]
+  }
+}
